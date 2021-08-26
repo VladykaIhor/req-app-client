@@ -1,0 +1,14 @@
+<div style="text-align: center;">
+  <form [formGroup]="phoneNumberForm" (submit)="onSubmit()" >
+    <div class="form-heading">Phone number verification: </div>
+
+    <input type="text" id="mobile" class="form-input" ngModel placeholder="Enter the 10 digit phone number"
+      formControlName="phoneNumber">
+    <div *ngIf="phoneNumber?.errors?.required && phoneNumber?.value" class="form-error">
+      Phone number is required
+    </div>
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+</div> 
