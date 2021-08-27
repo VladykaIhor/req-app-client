@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class HomeComponent {
 
   public phoneNumberForm: FormGroup;
-    // private readonly PHONE_NUMBER_REGEX: RegExp = new RegExp(); -- phone number Regex validator
+  // private readonly PHONE_NUMBER_REGEX: RegExp = new RegExp(); -- phone number Regex validator
 
   public get phoneNumber(): AbstractControl | null {
     return this.phoneNumberForm.get('phoneNumber');
@@ -30,7 +30,7 @@ export class HomeComponent {
 
   public onSubmit() {
     this.usersService.sendOtp(this.phoneNumber?.value).subscribe(
-      () => {this.router.navigate(["../otp"])},
+      () => { this.router.navigate(["../otp"]) },
       (error) => { console.error(error) },
     )
   }

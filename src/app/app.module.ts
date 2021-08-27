@@ -8,18 +8,18 @@ import { UserService } from 'src/common/services/user.service';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { OtpComponent } from './authorisation/otp/otp.component';
-import { DetailsComponent } from './profile/details/details.component';
-import { ProfileComponent } from './profile/profile.component';
 import { AppComponent } from './app.component';
 import { OtpService } from 'src/common/services/otp.service';
+import { RequisitionComponent } from './requisition/requisition/requisition.component';
 
 @NgModule({
   declarations: [
-    DetailsComponent,
-    ProfileComponent,
+    // DetailsComponent,
+    RequisitionComponent,
     HomeComponent,
     OtpComponent,
-    AppComponent
+    AppComponent,
+    RequisitionComponent
   ],
   imports: [
     AppRoutingModule,
