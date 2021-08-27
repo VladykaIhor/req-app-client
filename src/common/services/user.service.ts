@@ -26,13 +26,13 @@ export class UserService {
       return callback && callback();
     });
   }
-  public getUser(): Observable<UserModel> {
-    return new Observable<UserModel>((subject) => {
-      setTimeout(() => {
-        subject.next(new UserModel());
-      }, 5000);
-    });
-  }
+  // public getUser(): Observable<UserModel> {
+  //   return new Observable<UserModel>((subject) => {
+  //     setTimeout(() => {
+  //       subject.next(new UserModel());
+  //     }, 5000);
+  //   });
+  // }
   
   // parse response from observable -> redirect to /otp -> send otp to server and verify (another service) -> fill in requisition form 
   public sendOtp(phoneNumber: String): Observable<string> {

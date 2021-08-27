@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/common/services/user.service';
 import { Router } from '@angular/router';
+import { OtpService } from 'src/common/services/otp.service';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,7 @@ export class HomeComponent {
   }
 
   constructor(
+    private otpService : OtpService, 
     private formBuilder: FormBuilder,
     private usersService: UserService,
     private router: Router
@@ -34,6 +36,8 @@ export class HomeComponent {
       (error) => { console.error(error) },
     )
   }
+
+  
   authenticated() { return this.usersService.authenticated; }
 
 }
