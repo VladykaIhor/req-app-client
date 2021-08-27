@@ -1,27 +1,27 @@
 <div style="text-align: center;">
-    <form [formGroup]="nameForm" (submit)="onSubmit()" >
-      <div class="form-heading">Enter your first name: </div>
-  
-      <input type="text" id="firstName" class="form-input" ngModel formControlName="nameForm">
-      <div *ngIf="firstName?.errors?.required && firstName?.value" class="form-error">
-        First name is required
-      </div>
-      <br> <br>
-      <div class="form-heading">Enter your last name: </div>
-  
-      <input type="text" id="lastName" class="form-input" ngModel formControlName="nameForm">
-      <div *ngIf="lastName?.errors?.required && lastName?.value" class="form-error">
-        Last name is required
-      </div>
+    <form [formGroup]="nameForm" (submit)="onSubmit()">
 
-      <div class="form-heading">Enter your father's name: </div>
-  
-      <input type="text" id="fathersName" class="form-input" ngModel formControlName="nameForm">
-      <div *ngIf="fathersName?.errors?.required && fathersName?.value" class="form-error">
-        Father's name is required
-      </div>
+        <div class="form-heading">Enter your first name: </div>
 
-      <button type="submit">Submit</button>
+        <input type="text" id="firstName" class="form-input" ngModel formControlName="nameForm">
+        <div *ngIf="firstName?.errors?.required && firstName?.value" class="form-error">
+            First name is required
+        </div>
+        <div class="form-heading">Enter your last name: </div>
+
+        <input type="text" id="lastName" class="form-input" ngModel formControlName="nameForm">
+        <div *ngIf="lastName?.errors?.required && lastName?.value" class="form-error">
+            Last name is required
+        </div>
+
+        <div class="form-heading">Enter your father's name: </div>
+
+        <input type="text" id="fathersName" class="form-input" ngModel formControlName="nameForm">
+        <div *ngIf="fathersName?.errors?.required && fathersName?.value" class="form-error">
+            Father's name is required
+        </div>
+        <div>
+        <button type="submit">Submit</button>
+        </div>
     </form>
-  </div> 
-  
+</div>

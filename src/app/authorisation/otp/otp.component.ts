@@ -14,7 +14,8 @@ import { Router } from '@angular/router';
 export class OtpComponent{
   public oneTimeCodeForm: FormGroup;
  
-  constructor(private formBuilder: FormBuilder, 
+  constructor(
+    private formBuilder: FormBuilder, 
     private otpService : OtpService, 
     private router:Router) {
     this.oneTimeCodeForm = this.formBuilder.group({

@@ -7,21 +7,8 @@ import { RequisitionComponent } from './requisition/requisition/requisition.comp
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: HomeComponent },
-  { path: 'otp', component: OtpComponent,
-    // children: [
-    //   {
-    //     path: 'profile',
-    //     pathMatch: 'full',
-    //     component: ProfileComponent,
-    //   },
-    //   {
-    //     path: 'details',
-    //     component: DetailsComponent,
-    //   },
-    // ],
-  },
-  {path: 'nameForm', component: RequisitionComponent}
-];
+  { path: 'otp', component: OtpComponent },
+  {path: 'nameForm', component: RequisitionComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
