@@ -28,9 +28,9 @@ export class OtpComponent{
 
   public onSubmit() {
     this.otpService.validateOtp(this.oneTimeCode?.value).subscribe(
-      () => {this.router.navigate(["../nameForm"])},
+      () => {this.router.navigate(["../requisition/name-form"])},
       (error) => { console.error(error) },
     )
   }
-
+  
 }

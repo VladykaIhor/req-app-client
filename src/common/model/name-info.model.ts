@@ -1,6 +1,6 @@
-import { RequisitionIInterface } from '../interfaces/requisitionI.interface';
+import { NameInfoInterface } from '../interfaces/name-info.interface';
 
-export class RequisitionI implements RequisitionIInterface {
+export class NameInfo implements NameInfoInterface {
 
     constructor(
         public firstName?: string,

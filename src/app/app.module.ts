@@ -10,16 +10,19 @@ import { HomeComponent } from './home/home.component';
 import { OtpComponent } from './authorisation/otp/otp.component';
 import { AppComponent } from './app.component';
 import { OtpService } from 'src/common/services/otp.service';
-import { RequisitionComponent } from './requisition/requisition/requisition.component';
+import { NameInfoService } from 'src/common/services/name-info.service';
+import { NameInfoComponent } from './requisition/name_info/name-info/name-info.component';
+import { SocialInfoComponent } from './requisition/social_info/social-info/social-info.component';
+import { IncomeAndEmailInfoComponent } from './requisition/income_and_email_info/income-and-email-info/income-and-email-info.component';
 
 @NgModule({
   declarations: [
-    // DetailsComponent,
-    RequisitionComponent,
     HomeComponent,
     OtpComponent,
     AppComponent,
-    RequisitionComponent
+    NameInfoComponent,
+    SocialInfoComponent,
+    IncomeAndEmailInfoComponent
   ],
   imports: [
     AppRoutingModule,
@@ -29,7 +32,7 @@ import { RequisitionComponent } from './requisition/requisition/requisition.comp
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [UserService, OtpService],
+  providers: [UserService, OtpService, NameInfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,13 +12,6 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Requisition Application';
   constructor (private app: UserService, private http: HttpClient, private router: Router) {
-    this.app.authenticate("", undefined);
+    // this.app.authenticate("", undefined);
   }
-
-  // logout() {
-  //   this.http.post('logout', {}).finally(() => {
-  //       this.app.authenticated = false;
-  //       this.router.navigateByUrl('/login');
-  //   }).subscribe();
-  // }
 }
