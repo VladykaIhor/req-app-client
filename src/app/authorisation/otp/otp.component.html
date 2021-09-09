@@ -1,13 +1,13 @@
-<div style="text-align: center;">
+<div class="form">
 <form [formGroup]="oneTimeCodeForm" (submit)="onSubmit()">
-    <div>OTP verification</div>
-
+    <div class="title">OTP verification:</div>
+    <div class="subtitle">Enter the OTP you've received via SMS: </div>
     <div class="form-row">
-        <input type="number" id="mobile" class="form-input" formControlName="oneTimeCode"
-        ngModel placeholder="Enter the OTP you've received">
+        <input type="number" id="mobile" class="input" formControlName="oneTimeCode"
+        ngModel placeholder="XXXXX">
     </div>
     <div>
-        <button type="submit">Enter OTP</button>
+        <button class="submit">Enter OTP</button>
     </div>
 </form> 
 </div>

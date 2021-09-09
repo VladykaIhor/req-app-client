@@ -1,27 +1,22 @@
-<div style="text-align: center;">
+<div class="form">
     <form [formGroup]="nameForm" (submit)="onSubmit()">
-
-        <div class="form-heading">Enter your first name: </div>
-
-        <input type="text" id="firstName" class="form-input" ngModel formControlName="firstName">
-        <div *ngIf="firstName?.errors?.required && firstName?.value" class="form-error">
-            First name is required
+        <div class="title">Name info form</div>
+        <div class="subtitle">Plese fill in your name info: </div>
+        <div class="input-container ic1">
+            <input id="firstname" class="input" type="text" placeholder=" " ngModel formControlName="firstName" />
+            <div class="cut"></div>
+            <label for="firstname" class="placeholder">First name</label>
         </div>
-        <div class="form-heading">Enter your last name: </div>
-
-        <input type="text" id="lastName" class="form-input" ngModel formControlName="lastName">
-        <div *ngIf="lastName?.errors?.required && lastName?.value" class="form-error">
-            Last name is required
+        <div class="input-container ic2">
+            <input id="lastname" class="input" type="text" placeholder=" " ngModel formControlName="lastName" />
+            <div class="cut"></div>
+            <label for="lastname" class="placeholder">Last name</label>
         </div>
-
-        <div class="form-heading">Enter your father's name: </div>
-
-        <input type="text" id="fathersName" class="form-input" ngModel formControlName="fathersName">
-        <div *ngIf="fathersName?.errors?.required && fathersName?.value" class="form-error">
-            Father's name is required
+        <div class="input-container ic2">
+            <input id="email" class="input" type="text" placeholder=" " ngModel formControlName="fathersName" />
+            <div class="cut"></div>
+            <label for="email" class="placeholder">Father's name</label>>
         </div>
-        <div>
-        <button type="submit">Submit</button>
-        </div>
+        <button type="submit" class="submit">Submit</button>
     </form>
 </div>

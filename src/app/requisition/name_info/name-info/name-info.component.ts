@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, AbstractControl, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NameInfoService } from 'src/common/services/name-info.service';
@@ -6,7 +6,7 @@ import { NameInfoService } from 'src/common/services/name-info.service';
 @Component({
   selector: 'app-name-info',
   templateUrl: './name-info.component.html',
-  styleUrls: ['./name-info.component.sass']
+  styleUrls: ['./name-info.component.scss']
 })
 export class NameInfoComponent {
 
@@ -34,8 +34,4 @@ export class NameInfoComponent {
       (error) => { console.error(error) },
     )
   }
-
-  ngOnInit(): void {
-  }
-
 }

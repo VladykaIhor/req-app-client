@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'Requisition Application';
-  constructor (private app: UserService, private http: HttpClient, private router: Router) {
+  constructor () {
     // this.app.authenticate("", undefined);
   }
 }

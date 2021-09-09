@@ -1,1 +1,16 @@
-<p>social-info works!</p>
+<div class="form">
+    <form [formGroup]="socialInfoForm" (submit)="onSubmit()">
+        <div class="title">Social info: </div>
+        <div class="input-container ic1">
+            <input id="passport-number" class="input" type="text" placeholder=" " ngModel formControlName="firstName" />
+            <div class="cut"></div>
+            <label for="firstname" class="placeholder">First name</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="is-married" class="input" type="text" placeholder=" " ngModel formControlName="lastName" />
+            <div class="cut"></div>
+            <label for="lastname" class="placeholder">Last name</label>
+        </div>
+        <button type="submit" class="submit">Submit</button>
+    </form>
+</div>

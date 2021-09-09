@@ -1,6 +1,4 @@
-  @import "src/styles.scss";
-
-  .form {
+.form {
     background-color: #15172b;
     border-radius: 20px;
     box-sizing: border-box;
@@ -29,6 +27,7 @@
     height: 50px;
     position: relative;
     width: 100%;
+    margin-top: 30px;
   }
   
   .ic1 {

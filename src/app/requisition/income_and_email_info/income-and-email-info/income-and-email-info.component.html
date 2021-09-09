@@ -1,1 +1,16 @@
-<p>income-and-email-info works!</p>
+<div class="form">
+    <form [formGroup]="incomeAndEmailForm" (submit)="onSubmit()">
+        <div class="title">Income and email form</div>
+        <div class="input-container ic1">
+            <input id="firstname" class="input" type="text" placeholder=" " ngModel formControlName="income" />
+            <div class="cut"></div>
+            <label for="firstname" class="placeholder">First name</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="lastname" class="input" type="text" placeholder=" " ngModel formControlName="email" />
+            <div class="cut"></div>
+            <label for="lastname" class="placeholder">Last name</label>
+        </div>
+        <button type="submit" class="submit">Submit</button>
+    </form>
+</div>

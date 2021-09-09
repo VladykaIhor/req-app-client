@@ -1,14 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
-import { AbstractControl, FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { OtpService } from 'src/common/services/otp.service';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-otp',
   templateUrl: './otp.component.html',
-  styleUrls: ['./otp.component.sass']
+  styleUrls: ['./otp.component.scss']
 })
 
 export class OtpComponent{
@@ -28,7 +26,7 @@ export class OtpComponent{
 
   public onSubmit() {
     this.otpService.validateOtp(this.oneTimeCode?.value).subscribe(
-      () => {this.router.navigate(["../requisition/name-form"])},
+      () => {this.router.navigate(["../requisition/name-info"])},
       (error) => { console.error(error) },
     )
   }
