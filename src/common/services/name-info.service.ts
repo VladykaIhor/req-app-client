@@ -8,9 +8,9 @@ import { NameInfo } from "../model/name-info.model";
 export class NameInfoService {
     constructor(private http: HttpClient){}
 
-    public reqIUrl: string = "/users-ws/requisition/name-info";
+    public reqIIUrl: string = "/users-ws/requisition/social-info";
 
     public sendUserNameDetails(nameInfo : NameInfo): Observable<string> {
-        return this.http.post<string>( this.reqIUrl, {nameInfo});
+        return this.http.post<string>( this.reqIIUrl, {nameInfo});
     }
 }

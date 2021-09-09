@@ -1,21 +1,16 @@
-<div style="text-align: center;">
-  <form [formGroup]="phoneNumberForm" (submit)="onSubmit()" >
-    <div class="form-heading">Phone number verification: </div>
 
-    <input type="text" id="mobile" class="form-input" ngModel placeholder="Enter the 10 digit phone number" formControlName="phoneNumber">
-    <div *ngIf="phoneNumber?.errors?.required && phoneNumber?.value" class="form-error">
-      Phone number is required
-    </div>
-    <br>
-    <br>
-    <button type="submit">Submit</button>
-  </form>
-  <!-- <div class="b-container">
-    Sample Text
-</div> -->
-<!-- <div class="b-popup">
-    <div class="b-popup-content">
-        Text in Popup
-    </div>
-</div> -->
-</div> 
+  <div class="form">
+    <form [formGroup]="phoneNumberForm" (submit)="onSubmit()">
+      <div class="form-heading"></div>
+      <div class="title">Welcome!</div>
+      <div class="subtitle">Phone number verification: </div>
+
+      <div class="input-container ic1">
+        <input type="phoneNumber" id="mobile" class="input" ngModel placeholder="10 digit phone number"
+          formControlName="phoneNumber">
+        <div class="cut"></div>
+      </div>
+      <!-- <div *ngIf="phoneNumber?.errors?.required && phoneNumber?.value" class="form-error"> Phone number is required -->
+      <button type="text" class="submit">Submit</button>
+    </form>
+  </div>
