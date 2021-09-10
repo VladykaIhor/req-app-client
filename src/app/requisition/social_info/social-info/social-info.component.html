@@ -2,14 +2,14 @@
     <form [formGroup]="socialInfoForm" (submit)="onSubmit()">
         <div class="title">Social info: </div>
         <div class="input-container ic1">
-            <input id="passport-number" class="input" type="text" placeholder=" " ngModel formControlName="firstName" />
+            <input id="passport-number" class="input" type="text" placeholder=" " ngModel formControlName="passportNumber" />
             <div class="cut"></div>
-            <label for="firstname" class="placeholder">First name</label>
+            <label for="passport-number" class="placeholder">Passport number: </label>
         </div>
         <div class="input-container ic2">
-            <input id="is-married" class="input" type="text" placeholder=" " ngModel formControlName="lastName" />
+            <input id="is-married" class="input" type="text" placeholder=" " ngModel formControlName="isMarried" />
             <div class="cut"></div>
-            <label for="lastname" class="placeholder">Last name</label>
+            <label for="is-married" class="placeholder">Are you married?</label>
         </div>
         <button type="submit" class="submit">Submit</button>
     </form>

@@ -14,6 +14,9 @@ import { NameInfoService } from 'src/common/services/name-info.service';
 import { NameInfoComponent } from './requisition/name_info/name-info/name-info.component';
 import { SocialInfoComponent } from './requisition/social_info/social-info/social-info.component';
 import { IncomeAndEmailInfoComponent } from './requisition/income_and_email_info/income-and-email-info/income-and-email-info.component';
+import { IncomeAndEmailService } from 'src/common/services/income-and-email.service';
+import { SocialInfoService } from 'src/common/services/social-info.service';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,7 @@ import { IncomeAndEmailInfoComponent } from './requisition/income_and_email_info
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [UserService, OtpService, NameInfoService],
+  providers: [UserService, OtpService, NameInfoService, IncomeAndEmailService, SocialInfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

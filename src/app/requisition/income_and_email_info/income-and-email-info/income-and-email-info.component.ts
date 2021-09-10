@@ -20,8 +20,8 @@ export class IncomeAndEmailInfoComponent {
   }
   constructor(private formBuilder: FormBuilder, private incomeAndEmailService: IncomeAndEmailService, private router: Router) {
     this.incomeAndEmailForm = this.formBuilder.group({
-      passportNumber: this.formBuilder.control(null, [Validators.required, Validators.nullValidator]),
-      isMarried: this.formBuilder.control(null, [Validators.required, Validators.nullValidator])
+      income: this.formBuilder.control(null, [Validators.required, Validators.nullValidator]),
+      email: this.formBuilder.control(null, [Validators.required, Validators.nullValidator])
     })
   }
 
