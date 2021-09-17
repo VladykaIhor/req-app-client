@@ -3,15 +3,28 @@ import { UserModel } from '../model/user.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { LoginInfoInterface } from '../interfaces/login-info.interface';
+import { LoginInfo } from '../model/login-info.model';
 
 @Injectable()
 export class UserService {
-  
+
   public authenticated = false;
-  public loginUrl: string = "/users-ws/login";
-  constructor(private httpClient: HttpClient) {}
-  
-  
+  public sendOtpToUser: string = "/users-ws/sendOtp";
+  public smsCodeDTO!: LoginInfoInterface;
+  constructor(private httpClient: HttpClient) { }
+
+
+  public savePhoneNumber(phoneNumber:string): void {
+    this.smsCodeDTO = new LoginInfo("", phoneNumber);
+  }
+
+  public sendOtp(principal: string): Observable<string> {
+    this.savePhoneNumber(principal);
+    return this.httpClient.post<string>(this.sendOtpToUser, { principal });
+  }
+
+
   authenticate(phoneNumber: string, callback: any) {
     const headers = new HttpHeaders(phoneNumber ? {
       authorization: 'Basic ' + btoa(phoneNumber)
@@ -26,16 +39,6 @@ export class UserService {
       return callback && callback();
     });
   }
-  // public getUser(): Observable<UserModel> {
-  //   return new Observable<UserModel>((subject) => {
-  //     setTimeout(() => {
-  //       subject.next(new UserModel());
-  //     }, 5000);
-  //   });
-  // }
-  
-  // parse response from observable -> redirect to /otp -> send otp to server and verify (another service) -> fill in requisition form 
-  public sendOtp(phoneNumber: String): Observable<string> {
-    return this.httpClient.post<string>( this.loginUrl, { phoneNumber });
-  }
+
+
 }

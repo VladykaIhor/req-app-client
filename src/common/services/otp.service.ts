@@ -1,18 +1,23 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
 import { Observable } from "rxjs";
+import { LoginInfoInterface } from "../interfaces/login-info.interface";
+import { UserService } from "./user.service";
 
 
 
 @Injectable()
-export class OtpService {
+export class OtpService {  
+
+  private loginUrl: string = "/users-ws/login";
+  private smsCodeDTO!: LoginInfoInterface;
+
+  constructor(private http: HttpClient, private userService : UserService){}
     
-  constructor(private http: HttpClient){}
-
-    public otpUrl: string = "/users-ws/otp";
-
 
     public validateOtp(otp: string): Observable<string> {
-        return this.http.post<string>( this.otpUrl, {'code': otp});
+        this.smsCodeDTO = this.userService.smsCodeDTO;
+        this.smsCodeDTO.otp = otp;
+        return this.http.post<string>(this.loginUrl, this.userService.smsCodeDTO);
     }
 }
